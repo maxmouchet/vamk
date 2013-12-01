@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--Make sure to define class attribute for bean tag -->
+	<bean id="applicationContext"
+		class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder" />
+
+	<!--Make sure to define class attribute for bean tag -->
+	<bean id="customerSpringService" class="ws.customer.service.CustomerSpringService">
+		<property name="customers">
+			<map>
+				<entry key="1000">
+					<bean class="ws.customer.data.Customer">
+						<property name="customerID" value="1000" />
+						<property name="customerName" value="Laura" />
+						<property name="discountPercentage" value="55" />
+						<property name="privileged" value="true" />
+						<property name="shoppingAmount" value="1249.0" />
+					</bean>
+				</entry>
+				<entry key="2000">
+					<bean class="ws.customer.data.Customer">
+						<property name="customerID" value="2000" />
+						<property name="customerName" value="Jean" />
+						<property name="discountPercentage" value="15" />
+						<property name="privileged" value="true" />
+						<property name="shoppingAmount" value="41249.5" />
+					</bean>
+				</entry>
+				<entry key="3000">
+					<bean class="ws.customer.data.Customer">
+						<property name="customerID" value="3000" />
+						<property name="customerName" value="Dorothy" />
+						<property name="discountPercentage" value="35" />
+						<property name="privileged" value="false" />
+						<property name="shoppingAmount" value="4259.5" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

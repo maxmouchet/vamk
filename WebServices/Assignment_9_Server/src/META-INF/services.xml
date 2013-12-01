@@ -1,0 +1,29 @@
+<serviceGroup>
+<!-- Set the scope to application -->
+<service name="mm_SpringInit_In" class="ws.customer.service.SpringInit" scope="application">
+<description>
+This web service initializes Spring.
+</description>
+<parameter name="ServiceClass">ws.customer.service.SpringInit</parameter>
+<parameter name="ServiceTCCL">composite</parameter>
+<parameter name="load-on-startup">true</parameter>
+<operation name="springInit">
+<!-- Make sure that you have the following messageReceiver tag: <messageReceiver 
+class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/> -->
+<messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" /></operation>
+</service>
+<!-- Set the scope to application -->
+<service name="mm_CustomerSpringService_In" scope="application">
+<description>
+Customer Spring POJO Axis2 AAR deployment
+</description>
+<parameter name="ServiceClass">ws.customer.service.CustomerSpringService</parameter>
+<parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+<parameter name="SpringBeanName">customerSpringService</parameter>
+<messageReceivers>
+<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+</messageReceivers>
+</service>
+</serviceGroup>
