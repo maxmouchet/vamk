@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<collection>
+<cds>
+<cd>
+<title>Imagine</title>
+<artist>John Lennon</artist>
+<company_id>C2000</company_id>
+<price>10.9</price>
+<year>1978</year>
+</cd>
+<cd>
+<title>Bye Bye Baby</title>
+<artist>Terry Nice</artist>
+<company_id>C1000</company_id>
+<price>12.9</price>
+<year>2010</year>
+</cd>
+<cd>
+<title>Be Happy</title>
+<artist>Jerry Adams</artist>
+<company_id>C3000</company_id>
+<price>30.9</price>
+<year>2006</year>
+</cd>
+</cds>
+<companies>
+<company>
+<id>C1000</id>
+<name>Folk Music Company</name>
+</company>
+<company>
+<id>C2000</id>
+<name>Oriental Songs</name>
+</company>
+<company>
+<id>C3000</id>
+<name>Entertainment Company</name>
+</company>
+</companies>
+</collection>
