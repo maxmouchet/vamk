@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<assignments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="AssignIV-2.xsd">
+	<assignment number="A4">
+
+		<instruction language="en" software="eclipse">
+			Solve the problems and submit your solutions before the
+			<deadline format="FI">2012-10-01</deadline>
+			.
+		</instruction>
+
+		<problem id="P41">
+			See the description of the problem number
+			<pnumber value="P41" />
+			.
+		</problem>
+
+		<problem id="P42">
+			See the description of the problem number
+			<pnumber value="P42" />
+			. Hint:
+			<hint type="optional">Refer to the lecture examples for more help!</hint>
+		</problem>
+
+	</assignment>
+
+	<devoir number="A3">
+
+		<instruction language="fr">
+			Resoud le probleme et valide le avant le
+			<fin format="FI">2012-10-01</fin>
+			.
+		</instruction>
+
+		<probleme id="P43">
+			Voir la description du numero du probleme
+			<nombrep value="P43" />
+			.
+		</probleme>
+
+		<probleme id="P44">
+			Voir la description du numero du probleme
+			<nombrep value="P44" />
+			. Aide:
+			<aide type="optionnel">Voir le cours pour plus d'aide !</aide>
+		</probleme>
+		<cout>3 Credit</cout>
+	</devoir>
+</assignments>

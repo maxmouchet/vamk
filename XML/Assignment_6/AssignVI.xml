@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="AssignVI.xsl"?>
+
+
+<collection>
+
+<cds>
+<cd country="Finland">
+
+
+<titles>
+<title>Toivo huomiseen</title>
+<title>Huomisen toivo</title>
+<title>Huominen tulee</title> 
+</titles>
+
+<artist>Janita Blom</artist> 
+<price>10.90</price> 
+<company_ids>
+<company_id>C500</company_id>
+<company_id>C600</company_id>
+</company_ids>
+</cd>
+
+<cd country="Argentina">
+
+<titles>
+<title>Tango for two</title>
+<title>TW2</title>
+</titles>
+<artist>Hugo Rafael</artist>
+
+<price>5.90</price>
+<company_ids>
+<company_id>C300</company_id>
+</company_ids>
+</cd>
+
+<cd country="Cuba">
+<titles>
+<title>Latino Heat</title>
+<title>Samba</title>
+<title>Salsa</title>
+
+</titles>
+
+<artist>Riita Fernando</artist> 
+<price>20.50</price> 
+<company_ids>
+<company_id>C100</company_id>
+<company_id>C200</company_id>
+</company_ids>
+
+</cd> 
+</cds>
+
+<Companies>
+<company>
+<id>C100</id>
+<name>Fressh Wind</name>
+<address>Ghana, Akra, 00233</address>
+</company>
+
+<company>
+<id>C200</id>
+<name>Blue Sky</name>
+<address>Poland, Warsaw, 00455</address>
+</company>
+
+<company>
+<id>C300</id>
+<name>Smooth Feelings</name>
+<address>China, Shanghai, 00688</address>
+</company>
+
+<company>
+<id>C400</id>
+<name>Cool Breeze</name>
+<address>Finland, Vaasa, 65200</address>
+</company>
+
+<company>
+<id>C500</id>
+<name>Smell of Roses</name>
+<address>Iran, Shiraz, 0077</address>
+</company>
+
+<company>
+<id>C600</id>
+<name>Silver Ice</name>
+<address>Icelan, Reykjavik, 0077</address>
+</company>
+
+
+</Companies>
+
+</collection>

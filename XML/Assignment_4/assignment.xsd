@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xs:element name="assignment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="instruction" type="instructionType" />
+				<xs:element name="problem" type="problemType" maxOccurs="unbounded" />
+			</xs:sequence>
+			
+			<xs:attribute name="number" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="instructionType" mixed="true">
+		<xs:sequence>
+			<xs:element name="deadline" type="deadlineType" />
+		</xs:sequence>
+
+		<xs:attribute name="language" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="deadlineType" mixed="true">
+		<xs:attribute name="format" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="problemType" mixed="true">
+		<xs:sequence>
+			<xs:element name="pnumber" type="pnumberType" />
+			<xs:element name="hint" type="hintType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+
+		<xs:attribute name="id" type="xs:ID" />
+	</xs:complexType>
+
+	<xs:complexType name="pnumberType">
+		<xs:attribute name="value" type="xs:string" />
+	</xs:complexType>
+	
+	<xs:complexType name="hintType" mixed="true">
+		<xs:attribute name="type" type="xs:string" />
+	</xs:complexType>
+	
+</xs:schema>

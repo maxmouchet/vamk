@@ -1,0 +1,91 @@
+<html>
+<head>
+    <script>
+
+        //This is the function to load document for Firefox.
+        function loadXMLDoc(documentName)
+        {
+        if (window.XMLHttpRequest)
+        {
+        xhttp=new XMLHttpRequest();
+        }
+        else
+        {
+        xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //The value of async parameter by default is true, indicating whether
+        //or not to perform the operation asynchronously. If this value is false,
+        //the send() method does not return until the response is received.
+        //If true, notification of a completed transaction is provided using event listeners.
+        //This must be true if the multipart attribute is true, or an exception will be thrown.
+        xhttp.open("GET",documentName,false);
+
+        xhttp.send();
+        return xhttp.responseXML;
+        }
+
+
+        function displayResult(xmlFile, xslFile)
+        {
+
+        //For Internet Explorer
+        if (window.ActiveXObject)
+        {
+
+        //Here we load the XML file
+        xml = new ActiveXObject("MSXML2.DOMDocument");
+        xml.async = false;
+        xml.load(xmlFile);
+
+        //Here we load the XSL file
+        xsl = new ActiveXObject("MSXML2.DOMDocument");
+        xsl.async = false;
+        xsl.load(xslFile);
+
+
+        //Here we do the transformation and append the results to
+        //the data element of the current document.
+        document.getElementById("data").innerHTML=xml.transformNode(xsl);
+        /*var xmlRef = document.getElementById(xmlSection);
+        transformRresults.innerHTML = xmlRef.transformNode(xslRef);
+        */
+        }
+
+        //For Mozilla, Firefox, Opera, etc.
+        //else if (document.implementation && document.implementation.createDocument)
+        else if (typeof XSLTProcessor != "undefined")
+        {
+
+        xml=loadXMLDoc(xmlFile);
+        xsl=loadXMLDoc(xslFile);
+        //var hasXmlDom=document.implementation.hasFeature("XML", "2.0");
+        //var XPathSupport=document.implementation.hasFeature("XPath", "3.0");
+        //alert(XPathSupport);
+
+        xsltProcessor=new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        resultDocument = xsltProcessor.transformToFragment(xml,document);
+
+        var divNode=document.getElementById("data");
+        divNode.innerHTML="";
+        document.getElementById("data").appendChild(resultDocument);
+
+        }
+        }
+    </script>
+</head>
+<body>
+<ol>
+<li><a href="javascript:displayResult('movie_shop.xml','customer_pay_most.xsl');">Customer who pay the most</a></li>
+<li><a href="javascript:displayResult('movie_shop.xml','customer_pay_less.xsl');">Customer who pay the least</a></li>
+<li><a href="javascript:displayResult('movie_shop.xml','customers_rent_three.xsl');">Customers who have rented at least three movies</a></li>
+<li><a href="javascript:displayResult('movie_shop.xml','movies_rent_two.xsl');">Movies rented by at least two customers</a></li>
+</ol>
+
+<hr>
+
+<div id="data"/>
+
+</body>
+</html>

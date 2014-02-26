@@ -1,0 +1,56 @@
+<!ELEMENT company (employees, projects)>
+<!ATTLIST company
+	name CDATA #FIXED "Microsoft"
+	phone CDATA #FIXED "0123456789"
+	motto ENTITY #REQUIRED
+>
+<!ENTITY bwn "Be What's Next">
+
+<!-- Main elements -->
+<!ELEMENT employees (employee*)>
+<!ELEMENT projects  (project*)>
+
+<!-- Parameter entities -->
+<!ENTITY % general_info "first_name, last_name">
+<!ENTITY % date_format "format CDATA #FIXED 'yyyy-mm-dd'">
+<!ENTITY % currency "currency CDATA #FIXED 'USD'">
+
+<!-- Employee -->
+<!ELEMENT employee (%general_info;, specialty, phone, salary)>
+<!ATTLIST employee id ID #REQUIRED>
+
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+
+<!ELEMENT specialty (#PCDATA)>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone country_code CDATA #REQUIRED>
+
+<!ELEMENT salary (#PCDATA)>
+<!ATTLIST salary %currency;>
+
+<!-- Project -->
+<!ELEMENT project (name, manager, participants, starting_date, finishing_date, duration, budget)>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT manager EMPTY>
+<!ATTLIST manager id IDREF #REQUIRED>
+
+<!ELEMENT participants (participant*)>
+
+<!ELEMENT participant (hours)>
+<!ATTLIST participant id IDREF #REQUIRED>
+<!ELEMENT hours (#PCDATA)>
+
+<!ELEMENT starting_date  (#PCDATA)>
+<!ATTLIST starting_date %date_format;>
+<!ELEMENT finishing_date (#PCDATA)>
+<!ATTLIST finishing_date %date_format;>
+
+<!ELEMENT duration (#PCDATA)>
+<!ATTLIST duration unit CDATA #FIXED "hour">
+
+<!ELEMENT budget   (#PCDATA)>
+<!ATTLIST budget %currency;>

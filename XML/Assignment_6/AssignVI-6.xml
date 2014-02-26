@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<!-- AssignVI-6.xml -->
+<renting xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com AssignVI-6.xsd">
+  <movies>
+    <category type="action">
+      <movie>
+        <id>m001</id>
+        <name>Die Hard</name>
+        <director>John McTiernan</director>
+        <publication_year>1988</publication_year>
+        <duration>125</duration>
+        <renting_price>3.00</renting_price>
+      </movie>
+      <movie>
+        <id>m002</id>
+        <name>The Matrix</name>
+        <director>The Wachowski Brothers</director>
+        <publication_year>1999</publication_year>
+        <duration>136</duration>
+        <renting_price>3.50</renting_price>
+      </movie>
+    </category>
+    <category type="drama">
+      <movie>
+        <id>m003</id>
+        <name>The Godfather</name>
+        <director>Francis Ford Coppola</director>
+        <publication_year>1972</publication_year>
+        <duration>175</duration>
+        <renting_price>2.50</renting_price>
+      </movie>
+    </category>
+    <category type="horror">
+      <movie>
+        <id>m004</id>
+        <name>The Exorcist</name>
+        <director>William Friedkin</director>
+        <publication_year>1973</publication_year>
+        <duration>122</duration>
+        <renting_price>3.00</renting_price>
+      </movie>
+    </category>
+  </movies>
+
+  <customers>
+    <customer rang="privileged">
+      <id>c001</id>
+      <first_name>John</first_name>
+      <last_name>Doe</last_name>
+      <rented_movies>
+        <rented_movie until="2013-12-03">m004</rented_movie>
+        <rented_movie until="2013-12-03">m001</rented_movie>
+      </rented_movies>
+    </customer>
+    <customer rang="ordinary">
+      <id>c002</id>
+      <first_name>Jane</first_name>
+      <last_name>Done</last_name>
+      <rented_movies>
+        <rented_movie until="2013-11-29">m002</rented_movie>
+      </rented_movies>
+    </customer>
+  </customers>
+</renting>

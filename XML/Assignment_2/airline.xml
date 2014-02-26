@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:airline xmlns:p="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com airline.xsd ">
+  <p:journeys>
+    <p:flight flight_number="idvalue0">
+      <p:date>2001-01-01</p:date>
+      <p:air_plane>Airbus</p:air_plane>
+      <p:from>Vaasa</p:from>
+      <p:to>Lyon</p:to>
+      <p:duration>18</p:duration>
+      <p:price>0.0</p:price>
+      <p:available_classes>1</p:available_classes>
+    </p:flight>
+    <p:flight flight_number="idvalue1">
+      <p:date>2001-01-01</p:date>
+      <p:air_plane>Airbus</p:air_plane>
+      <p:from>Vaasa</p:from>
+      <p:to>Montreal</p:to>
+      <p:duration>18</p:duration>
+      <p:price>0.0</p:price>
+      <p:available_classes>1</p:available_classes>
+    </p:flight>
+    <p:flight flight_number="idvalue2">
+      <p:date>2001-01-01</p:date>
+      <p:air_plane>Airbus</p:air_plane>
+      <p:from>Vaasa</p:from>
+      <p:to>Geneva</p:to>
+      <p:duration>18</p:duration>
+      <p:price>0.0</p:price>
+      <p:available_classes>1</p:available_classes>
+    </p:flight>
+  </p:journeys>
+  <p:passengers>
+    <p:passenger flight_number="idvalue0">
+      <p:first_name>Jean</p:first_name>
+      <p:last_name>Dupont</p:last_name>
+      <p:seat_position>aisle</p:seat_position>
+      <p:diet>vegetarian</p:diet>
+      <p:travelling_class>first</p:travelling_class>
+    </p:passenger>
+    <p:passenger flight_number="idvalue1">
+      <p:first_name>Jeanne</p:first_name>
+      <p:last_name>Duc</p:last_name>
+      <p:seat_position>aisle</p:seat_position>
+      <p:diet>vegetarian</p:diet>
+      <p:travelling_class>first</p:travelling_class>
+    </p:passenger>
+    <p:passenger flight_number="idvalue2">
+      <p:first_name>Marc</p:first_name>
+      <p:last_name>Juan</p:last_name>
+      <p:seat_position>aisle</p:seat_position>
+      <p:diet>vegetarian</p:diet>
+      <p:travelling_class>first</p:travelling_class>
+    </p:passenger>
+  </p:passengers>
+</p:airline>

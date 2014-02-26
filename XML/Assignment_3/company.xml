@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE company SYSTEM "company.dtd" >
+<company motto="&bwn;" name="Microsoft" phone="0123456789">
+  <employees>
+    <employee id="1">
+      <first_name>Jean</first_name>
+      <last_name>Jacques</last_name>
+      <specialty>Software Engineer</specialty>
+      <phone country_code="33">664883710</phone>
+      <salary currency="USD">15000</salary>
+    </employee>
+    <employee id="2">
+      <first_name>Marie</first_name>
+      <last_name>White</last_name>
+      <specialty>Business Consultant</specialty>
+      <phone country_code="358">864472275</phone>
+      <salary currency="USD">20000</salary>
+    </employee>
+    <employee id="3">
+      <first_name>Alex</first_name>
+      <last_name>Should</last_name>
+      <specialty>Project Management</specialty>
+      <phone country_code="1">565772891</phone>
+      <salary currency="USD">21000</salary>
+    </employee>
+  </employees>
+  <projects>
+    <project>
+      <name>Windows 95</name>
+      <manager id="3"/>
+      <participants>
+        <participant id="1">
+          <hours>250</hours>
+        </participant>
+      </participants>
+      <starting_date format="yyyy-mm-dd">1993-09-01</starting_date>
+      <finishing_date format="yyyy-mm-dd">1995-12-24</finishing_date>
+      <duration unit="hour">5000</duration>
+      <budget currency="USD">1000000</budget>
+    </project>
+    <project>
+      <name>Windows 3.11</name>
+      <manager id="3"/>
+      <participants>
+        <participant id="1">
+          <hours>350</hours>
+        </participant>
+        <participant id="2">
+          <hours>150</hours>
+        </participant>
+      </participants>
+      <starting_date format="yyyy-mm-dd">1990-07-01</starting_date>
+      <finishing_date format="yyyy-mm-dd">1992-09-10</finishing_date>
+      <duration unit="hour">3000</duration>
+      <budget currency="USD">500000</budget>
+    </project>
+  </projects>
+</company>

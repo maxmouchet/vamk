@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="assignments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="assignment" type="assignmentType" />
+        <xs:element name="devoir" type="assignmentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="problemType" mixed="true">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="pnumber" type="pnumberType" />
+        <xs:element name="nombrep" type="pnumberType" />
+      </xs:choice>
+      <xs:choice>
+        <xs:element name="hint" minOccurs="0" type="hintTypeEn" />
+        <xs:element name="aide" minOccurs="0" type="hintTypeFr" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" />
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="instructionType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="deadline" type="deadlineType" />
+        <xs:element name="fin" type="deadlineType" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="language" type="xs:string" />
+    <xs:anyAttribute />
+  </xs:complexType>
+
+  <xs:complexType name="pnumberType">
+        <xs:attribute name="value">
+          <xs:simpleType>
+            <xs:restriction base="xs:IDREF" />
+          </xs:simpleType>
+        </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="assignmentType">
+    <xs:sequence>
+        <xs:element name="instruction" type="instructionType" />
+      <xs:choice>
+        <xs:element name="problem" type="problemType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="probleme" type="problemType" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:choice>
+      <xs:any minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="number" type="xs:string" use="required" />
+    <xs:anyAttribute />
+  </xs:complexType>
+
+  <xs:complexType name="hintTypeEn">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="optional" />
+              <xs:enumeration value="require" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+    <xs:complexType name="hintTypeFr">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="optionnel" />
+              <xs:enumeration value="obligatoire" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="deadlineType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="format" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+<xs:element name="cost" type="xs:string" />
+<xs:element name="cout" type="xs:string" />
+
+<xs:attribute name="software" type="xs:string" />
+<xs:attribute name="logiciel" type="xs:string" />
+</xs:schema>
