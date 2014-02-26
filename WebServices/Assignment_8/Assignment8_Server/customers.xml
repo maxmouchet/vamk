@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_65" class="java.beans.XMLDecoder"> 
+ <array class="java.lang.Object" length="1"> 
+  <void index="0"> 
+   <object class="ws.customer.data.Customer"> 
+    <void property="customerName"> 
+     <string>Juan</string> 
+    </void> 
+   </object> 
+  </void> 
+ </array> 
+</java> 

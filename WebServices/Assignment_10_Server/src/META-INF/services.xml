@@ -1,0 +1,27 @@
+<serviceGroup>
+	<service name="e1301130_assignment10_primesservice">
+		<description>Assignment 10.1</description>
+		<parameter name="ServiceClass">service.primes.SOAPPrimesService</parameter>
+		<operation name="getPrimes">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</operation>
+	</service>
+	<service name="e1301130_assignment10_sortservice">
+		<description>Assignment 10.2</description>
+		<parameter name="ServiceClass">service.sort.SOAPSortService</parameter>
+		<operation name="sort">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</operation>
+	</service>
+	<service name="e1301130_assignment10_customersservice">
+		<description>Assignment 10.3</description>
+		<parameter name="ServiceClass">service.customers.SOAPCustomersService
+		</parameter>
+		<operation name="getCustomerInfos">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</operation>
+	</service>
+</serviceGroup>
