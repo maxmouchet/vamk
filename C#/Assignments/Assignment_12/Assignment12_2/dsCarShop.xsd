@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCarShop" targetNamespace="http://tempuri.org/dsCarShop.xsd" xmlns:mstns="http://tempuri.org/dsCarShop.xsd" xmlns="http://tempuri.org/dsCarShop.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;\\profile.ad.puv.fi\roaming_data\e1301130\My Documents\Visual Studio 2010\Projects\Assignment12\Assignment12_1\Northwind.mdb&quot;" IsAppSettingsProperty="false" Modifier="Assembly" Name="Northwind.mdb" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCarShop" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsCarShop" msprop:Generator_UserDSName="dsCarShop">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cars" msprop:Generator_TableClassName="CarsDataTable" msprop:Generator_TableVarName="tableCars" msprop:Generator_RowChangedName="CarsRowChanged" msprop:Generator_TablePropName="Cars" msprop:Generator_RowDeletingName="CarsRowDeleting" msprop:Generator_RowChangingName="CarsRowChanging" msprop:Generator_RowEvHandlerName="CarsRowChangeEventHandler" msprop:Generator_RowDeletedName="CarsRowDeleted" msprop:Generator_RowClassName="CarsRow" msprop:Generator_UserTableName="Cars" msprop:Generator_RowEvArgName="CarsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Brand" msprop:Generator_ColumnVarNameInTable="columnBrand" msprop:Generator_ColumnPropNameInRow="Brand" msprop:Generator_ColumnPropNameInTable="BrandColumn" msprop:Generator_UserColumnName="Brand" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="EngineSize" msprop:Generator_ColumnVarNameInTable="columnEngineSize" msprop:Generator_ColumnPropNameInRow="EngineSize" msprop:Generator_ColumnPropNameInTable="EngineSizeColumn" msprop:Generator_UserColumnName="EngineSize" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Cars" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
