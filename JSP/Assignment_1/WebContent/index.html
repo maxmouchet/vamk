@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Assignment 1</title>
+</head>
+
+<body>
+	<form method='POST' action='forum'>
+		<h1>Create a new post</h1>
+		<table border="0">
+			<tr>
+				<th>Name:</th>
+				<td><input type="text" name="username" size="20"></td>
+			</tr>
+			<tr>
+				<th>Message:</th>
+				<td><input type="text" name="message"></td>
+			</tr>
+			<tr><td></td><td><input type="submit" value="Submit"></td></tr>
+		</table>
+	</form>
+	<form method='GET' action='search'>
+		<h1>Search for posts</h1>
+		<table border="0">
+			<tr>
+				<th>Name (optional):</th>
+				<td><input type="text" name="username" size="20"></td>
+			</tr>
+			<tr>
+				<th>Date (optional):</th>
+				<td><input type="text" name="date"></td>
+			</tr>
+			<tr><td></td><td><input type="submit" value="Submit"></td></tr>
+		</table>
+	</form>
+</body>
+</html>
